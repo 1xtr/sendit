@@ -1,2 +1,38 @@
+body
+  font-family: 'PT Sans', sans-serif
+a
+  text-decoration: none
+
 @import "vars"
+
+
+.button
+  width: 360px
+  height: 48px
+  border-radius: 30px
+  @include flexbox
+  text-transform: uppercase
+  font-size: 16px
+  line-height: 19px
+  font-weight: bold
+  &:focus,
+  &:hover
+    outline: none
+    box-shadow: 0 4px 15px rgba(27, 170, 235, 0.45)
+
+
+  &_blue
+    background-color: $siteColor1
+    color: #fff
+    &:active
+      background: #94D1EC
+  &_yellow
+    background-color: $siteColor3
+    color: #000
+    &:active
+      background: #FCE39C
+
+.slogan
+  @include flexbox
+
 @import "w320"
