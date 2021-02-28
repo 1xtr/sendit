@@ -1,10 +1,44 @@
+*
+  margin: 0
 body
-  font-family: 'PT Sans', sans-serif
+  font-family: myriad-pro, sans-serif
 a
   text-decoration: none
 
 @import "vars"
 
+// отключаем маркер в Firefox у details - summary
+@-moz-document url-prefix()
+  summary
+    display: block
+
+summary::-webkit-details-marker
+  display: none
+
+details:focus, details[open]:focus, summary:focus
+  outline: none
+
+details[open].faq__details > summary::after
+  font-family: FontAwesome, serif
+  content: '\f077'
+  margin-left: 8px
+  width: 10px
+  color: $siteColor1
+details.faq__details > summary::after
+  font-family: FontAwesome, serif
+  content: '\f078'
+  margin-left: 8px
+  width: 10px
+  color: $siteColor1
+
+.h2
+  font-weight: bold
+  font-size: 28px
+  line-height: 34px
+  padding: 5px
+
+.white-txt
+  color: white
 
 .button
   width: 360px
@@ -19,8 +53,6 @@ a
   &:hover
     outline: none
     box-shadow: 0 4px 15px rgba(27, 170, 235, 0.45)
-
-
   &_blue
     background-color: $siteColor1
     color: #fff

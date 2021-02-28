@@ -18,32 +18,42 @@
       color: white
       font-size: 30px
 
+
   .menu
     width: 100%
     display: flex
     justify-content: space-between
 
+
   .slogan
-    min-height: 227px
     padding-top: 27px
     padding-bottom: 27px
     flex-direction: column
     justify-content: space-around
     align-items: center
-    background-color: #fff
-    text-align: center
+    &__middle
+      background: #F7F7F7
+      padding-top: 20px
+      padding-bottom: 20px
     &__H2
-      font-weight: bold
-      font-size: 32px
+      font-style: normal
+      font-weight: 900
+      font-size: 29px
       line-height: 38px
       text-transform: uppercase
+    &__H3
+      font-weight: bold
+      font-size: 24px
+      line-height: 29px
+      padding-bottom: 15px
     &__p
       width: 280px
-      font-size: 22px
+      font-size: 20px
       line-height: 29px
       font-weight: bold
       text-transform: uppercase
-      margin-bottom: 17px
+      margin: 17px 0
+
 
   .about
     position: relative
@@ -67,18 +77,16 @@
       font-size: 18px
       line-height: 22px
       font-weight: bold
-      text-align: center
       margin: 15px 0 10px
     &__p
       font-size: 14px
       line-height: 16px
       text-align: justify
       padding-bottom: 17px
+
   .steps
     padding-top: 27px
     padding-bottom: 27px
-    & *
-      margin: 0
     &__img
       width: 100%
     &__item
@@ -94,3 +102,195 @@
       line-height: 17px
       padding: 6px 0
       text-align: left
+
+
+  .callback
+    background-color: $siteColor1
+    min-width: 278px
+
+    &__form
+      padding-top: 15px
+      min-height: 250px
+      color: #fff
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      &_black-mh180
+        color: #000
+        min-height: 180px
+    &__h2
+      font-size: 28px
+      line-height: 34px
+      font-weight: bold
+      text-align: left
+      text-transform: uppercase
+    &__p
+      font-size: 14px
+      line-height: 13px
+      text-align: left
+    &__tel
+      padding: 17px 24px
+      width: 230px
+      border-radius: 30px
+      border: none
+      &__footer
+        background-color: inherit
+        border: 1px solid #000
+
+
+  .personal-data
+    display: none
+    &:checked + &__label::before
+      font-family: FontAwesome, serif
+      content: '\f14a'
+      width: 10px
+      height: 10px
+      margin-right: 8px
+    &__label
+      font-size: 10px
+      line-height: 12px
+      text-align: left
+      &::before
+        font-family: FontAwesome, serif
+        content: '\f0c8'
+        width: 10px
+        height: 10px
+        margin-right: 8px
+
+  .review
+    @include padding_20_0
+    position: relative
+    min-width: 278px
+    &__box
+      padding: 12px 20px 0 20px
+      position: relative
+    &__slide
+      position: absolute
+      color: #c4c4c4
+      font-size: 12px
+      top: 0
+      z-index: 10
+      height: 100%
+      display: flex
+      align-items: center
+      &_left
+        left: 0
+      &_right
+        right: 0
+    &__photo
+      width: 100px
+      height: 100px
+      padding-right: 18px
+      float: left
+    &__name
+      padding-bottom: 6px
+      font-size: 26px
+      line-height: 31px
+    &__surname
+      padding-bottom: 10px
+      font-size: 18px
+      line-height: 22px
+    &__desc
+      padding-bottom: 5px
+      font-size: 10px
+      line-height: 12px
+    &__text
+      font-size: 12px
+      line-height: 14px
+      text-align: justify
+      clear: both
+
+  .advantages
+    @include padding_20_0
+    background-color: #f7f7f7
+    min-width: 278px
+    &__container
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      padding-top: 15px
+    &__box
+      @include padding_10_0
+      display: flex
+      flex-direction: column
+      width: 86px
+      padding-right: 5px
+    &__img
+      width: 43px
+
+      &-cover
+        width: 86px
+        height: 86px
+        border-radius: 43px
+        background-color: #fff
+        @include flexbox
+    &__text
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      padding-top: 10px
+
+  .guaranty
+    @include padding_20_0
+    &__header
+      display: flex
+      padding-bottom: 14px
+      align-items: center
+    &__box
+      position: relative
+      padding: 0 20px
+    &__icon
+      width: 62px
+      height: 62px
+      border-radius: 31px
+      background-color: #f7f7f7
+      @include flexbox
+      margin-right: 10px
+    &__img
+      width: 50%
+      height: 50%
+
+    &__ttl
+      font-size: 16px
+      line-height: 19px
+      text-align: left
+    &__text
+      font-size: 12px
+      line-height: 14px
+      text-align: justify
+      padding: 12px 0
+
+  .faq
+    @include padding_20_0
+    background-color: #D2ECF7
+    &__qustions
+      display: flex
+      flex-direction: column
+    &__answer
+      background: #F7F7F7
+      padding: 15px 25px
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+      border-radius: 0 0 32px 32px
+    &__details
+      background-color: #fff
+      font-size: 14px
+      line-height: 17px
+      text-align: left
+      min-height: 20px
+      min-width: 228px
+      border-radius: 32px
+      display: flex
+      align-items: center
+      margin: 10px 0
+      cursor: pointer
+    &__summary
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+      padding: 15px 25px
