@@ -1,2 +1,26 @@
 // for mobile from 320 to 768px
 @media (min-width: 768px) and (max-width: 1200px)
+  .center
+    padding: 0 calc(50vw - 350px)
+  .logo-img
+    &_top
+      padding: 27px 0
+  .menu__label
+    display: none
+
+  .top-menu
+    display: flex
+    align-items: center
+    flex-grow: 1
+    justify-content: space-around
+    &__link
+      display: inline-block
+      color: #fff
+      font-size: 14px
+      line-height: 17px
+      box-sizing: border-box
+      padding: 35px 10px
+      &:hover
+        background-color: $siteColor1
+    &__list
+      list-style: none

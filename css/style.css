@@ -58,9 +58,6 @@ details.faq__details > summary::after {
   color: white;
 }
 
-.logo-img_top {
-  padding: 27px 21px;
-}
 .logo-img_footer {
   padding: 20px 0;
   height: 37px;
@@ -115,12 +112,21 @@ details.faq__details > summary::after {
 
 .header {
   display: flex;
+  align-items: flex-start;
   box-sizing: border-box;
   min-width: 320px;
   min-height: 277px;
   background: url("../img/header_bg_small.jpg") no-repeat bottom right;
   background-size: cover;
   padding-top: 27px;
+}
+.header__switch {
+  visibility: hidden;
+  position: absolute;
+  left: -999999px;
+}
+.header__switch:checked + .nav {
+  right: 0;
 }
 
 .fa-bars {
@@ -131,12 +137,6 @@ details.faq__details > summary::after {
 .fa-bars__footer {
   font-size: 33px;
   color: black;
-}
-
-.menu {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 
 .slogan {
@@ -546,11 +546,97 @@ details.faq__details > summary::after {
   display: none;
 }
 
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 280px;
+}
+
+.top-menu {
+  display: none;
+}
+
+.menu {
+  display: block;
+}
+.menu__list {
+  list-style: none;
+}
+.menu__link {
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6px 25px;
+  color: #000;
+  transition: all 0.5s;
+}
+.menu__link:hover {
+  color: #ffffff;
+  background-color: #008DCD;
+}
+.menu__label {
+  color: #fff;
+  font-size: 29px;
+  display: block;
+}
+.menu__label_footer {
+  color: #000;
+  padding: 25px 15px 25px 0;
+}
+.menu__label_close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 40px;
+  padding: 15px 25px;
+}
+.menu__label_close:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .center {
+    padding: 0 calc(50vw - 350px);
+  }
+
+  .logo-img_top {
+    padding: 27px 0;
+  }
+
+  .menu__label {
+    display: none;
+  }
+
+  .top-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+  .top-menu__link {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    box-sizing: border-box;
+    padding: 35px 10px;
+  }
+  .top-menu__link:hover {
+    background-color: #008DCD;
+  }
+  .top-menu__list {
+    list-style: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
