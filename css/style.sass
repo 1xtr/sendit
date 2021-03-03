@@ -46,8 +46,8 @@ details.faq__details > summary::after
   color: white
 
 .logo-img
-  //&_top
-  //  padding: 27px 21px
+  &_top
+    padding: 27px 21px
   &_footer
     padding: 20px 0
     height: 37px
@@ -86,14 +86,11 @@ details.faq__details > summary::after
 .center
   padding: 0 calc(50vw - 140px)
 .header
-  display: flex
-  align-items: flex-start
+  position: relative
   box-sizing: border-box
   min-width: 320px
   min-height: 277px
-  background: url("../img/header_bg_small.jpg") no-repeat bottom right
-  background-size: cover
-  padding-top: 27px
+
   &__switch
     visibility: hidden
     position: absolute
@@ -113,8 +110,7 @@ details.faq__details > summary::after
 
 
 .slogan
-  padding-top: 27px
-  padding-bottom: 27px
+  padding: 27px 20px
   flex-direction: column
   justify-content: space-around
   align-items: center
@@ -176,6 +172,7 @@ details.faq__details > summary::after
   &__img
     width: 100%
   &__item
+    max-width: 278px
     margin-bottom: 20px
   &__h2
     padding: 6px 0

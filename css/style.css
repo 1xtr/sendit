@@ -58,6 +58,9 @@ details.faq__details > summary::after {
   color: white;
 }
 
+.logo-img_top {
+  padding: 27px 21px;
+}
 .logo-img_footer {
   padding: 20px 0;
   height: 37px;
@@ -111,14 +114,10 @@ details.faq__details > summary::after {
 }
 
 .header {
-  display: flex;
-  align-items: flex-start;
+  position: relative;
   box-sizing: border-box;
   min-width: 320px;
   min-height: 277px;
-  background: url("../img/header_bg_small.jpg") no-repeat bottom right;
-  background-size: cover;
-  padding-top: 27px;
 }
 .header__switch {
   visibility: hidden;
@@ -140,8 +139,7 @@ details.faq__details > summary::after {
 }
 
 .slogan {
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding: 27px 20px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -215,6 +213,7 @@ details.faq__details > summary::after {
   width: 100%;
 }
 .steps__item {
+  max-width: 278px;
   margin-bottom: 20px;
 }
 .steps__h2 {
@@ -548,8 +547,12 @@ details.faq__details > summary::after {
 
 .nav {
   width: 100%;
+  min-height: 277px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  background: url("../img/header_bg_small.jpg") no-repeat bottom right;
+  background-size: cover;
 }
 
 .site-menu {
@@ -587,6 +590,7 @@ details.faq__details > summary::after {
   color: #fff;
   font-size: 29px;
   display: block;
+  padding: 27px 21px;
 }
 .menu__label_footer {
   color: #000;
@@ -606,18 +610,23 @@ details.faq__details > summary::after {
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .center {
-    padding: 0 calc(50vw - 350px);
+    padding: 0 calc(50vw - 350px );
   }
 
   .logo-img_top {
-    padding: 27px 0;
+    padding: 27px 20px;
   }
 
   .menu__label {
     display: none;
   }
 
+  .nav {
+    min-height: 415px;
+  }
+
   .top-menu {
+    padding-right: 20px;
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -636,6 +645,34 @@ details.faq__details > summary::after {
   }
   .top-menu__list {
     list-style: none;
+  }
+
+  .slogan {
+    position: absolute;
+    width: 400px;
+    height: 245px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: #fff;
+    align-items: flex-start;
+    margin-top: 115px;
+    margin-left: 34px;
+  }
+  .slogan__H2 {
+    font-size: 44px;
+    line-height: 53px;
+    text-align: left;
+  }
+  .slogan__p {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .steps {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
   }
 }
 
