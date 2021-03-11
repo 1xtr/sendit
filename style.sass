@@ -1,9 +1,14 @@
 *
   margin: 0
-body
-  font-family: myriad-pro, sans-serif
+  padding: 0
+
 a
   text-decoration: none
+  &:hover
+    cursor: pointer
+
+body
+  font-family: 'PT Sans', sans-serif
 
 @import "vars"
 
@@ -19,11 +24,11 @@ details:focus, details[open]:focus, summary:focus
   outline: none
 
 details[open].faq__details > summary::after
-  font-family: FontAwesome, serif
-  content: '\f077'
-  margin-left: 8px
-  width: 10px
-  color: $siteColor1
+    font-family: FontAwesome, serif
+    content: '\f077'
+    margin-left: 8px
+    width: 10px
+    color: $siteColor1
 details.faq__details > summary::after
   font-family: FontAwesome, serif
   content: '\f078'
@@ -31,29 +36,14 @@ details.faq__details > summary::after
   width: 10px
   color: $siteColor1
 
-.h2
-  font-weight: bold
-  font-size: 28px
-  line-height: 34px
-  padding: 5px
-.h3
-  font-weight: 600
-  font-size: 18px
-  line-height: 22px
-  padding: 5px
 
-.white-txt
-  color: white
-
-.logo-img
-  &_top
-    padding: 27px 21px
-  &_footer
-    padding: 20px 0
-    height: 37px
+.center
+  padding: 0 calc(50vw - 278px / 2)
+  &_margin
+    margin: 0 auto
 
 .button
-  width: 360px
+  width: 278px
   height: 48px
   border-radius: 30px
   @include flexbox
@@ -61,35 +51,43 @@ details.faq__details > summary::after
   font-size: 16px
   line-height: 19px
   font-weight: bold
-  &:focus,
   &:hover
-    outline: none
     box-shadow: 0 4px 15px rgba(27, 170, 235, 0.45)
   &_blue
     background-color: $siteColor1
     color: #fff
-    &:active
-      background: #94D1EC
   &_yellow
     background-color: $siteColor3
     color: #000
-    &:active
-      background: #FCE39C
 
-.slogan
-  @include flexbox
+.padding-m320
+  padding: 27px 20px
 
-// for mobile from 320 to 768px
+.title-m320
+  font-size: 28px
+  line-height: 34px
+  text-align: left
+  font-weight: bold
+  text-transform: uppercase
+  color: #000
+  &_white
+    color: #fff
+  &_padding
+    padding: 27px 21px
 
-.button
-  width: 278px
-.center
-  padding: 0 calc(50vw - 140px)
-.header
+//@media (max-width: 767px)
+.top
   position: relative
-  box-sizing: border-box
-  min-width: 320px
   min-height: 277px
+  //min-width: 320px
+
+.header
+  min-height: 50vh
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  background: url("img/top-bg_small.jpg") no-repeat bottom right
+  background-size: cover
 
   &__switch
     visibility: hidden
@@ -97,46 +95,33 @@ details.faq__details > summary::after
     left: -999999px
     &:checked + .nav
       right: 0
-    //box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8)
-
-.fa-bars
-  display: block
-  color: white
-  font-size: 30px
-  &__footer
-    font-size: 33px
-    color: black
+      //box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8)
 
 
+.logo-img
+  &_top
+    padding: 27px 21px
+  &_footer
+    padding: 25px 0 25px 0
+    height: 37px
 
-.slogan
-  padding: 27px 20px
+.send-box
+  height: 50vh
+  display: flex
   flex-direction: column
   justify-content: space-around
   align-items: center
-  &__middle
-    background: #F7F7F7
-    padding-top: 20px
-    padding-bottom: 20px
-  &__H2
-    font-style: normal
-    font-weight: 900
-    font-size: 29px
+  background-color: #fff
+  text-align: center
+  &__h2
+    font-size: 32px
     line-height: 38px
-    text-transform: uppercase
-  &__H3
-    font-weight: bold
+  &__p
     font-size: 24px
     line-height: 29px
-    padding-bottom: 15px
-  &__p
-    width: 280px
-    font-size: 20px
-    line-height: 29px
     font-weight: bold
-    text-transform: uppercase
-    margin: 17px 0
 
+// about div
 .about
   position: relative
   background-color: #f7f7f7
@@ -144,8 +129,7 @@ details.faq__details > summary::after
   justify-content: space-around
   align-items: center
   flex-direction: column
-  padding-top: 21px
-  padding-bottom: 21px
+  padding: 21px
   min-width: 278px
   &__content
     display: flex
@@ -154,44 +138,65 @@ details.faq__details > summary::after
     align-items: center
   &__img
     width: 278px
-    margin-bottom: 25px
+
   &__h3
     font-size: 18px
     line-height: 22px
     font-weight: bold
-    margin: 15px 0 10px
+    text-align: center
+    padding: 5px
   &__p
     font-size: 14px
     line-height: 16px
     text-align: justify
-    padding-bottom: 17px
+    padding-bottom: 15px
+// steps div
 
 .steps
-  padding-top: 27px
-  padding-bottom: 27px
+  //@include flexbox
+  //flex-direction: column
+  //min-width: 278px
+  padding: 21px
   &__img
+    //padding: 6px 0
     width: 100%
   &__item
-    max-width: 278px
-    margin-bottom: 20px
+    //height: 50vh
+    //display: block
+    //flex-direction: column
+    padding: 18px 0
+
   &__h2
-    padding: 6px 0
     font-size: 26px
     line-height: 31px
     font-weight: bold
+    padding: 6px 0
     text-align: left
   &__p
     font-size: 14px
     line-height: 17px
     padding: 6px 0
     text-align: left
+  &__footer
+    padding: 21px
+    background-color: #f7f7f7
+    text-align: center
+    @include flexbox
+    flex-direction: column
+    min-width: 278px
+    &__text
+      font-size: 24px
+      line-height: 29px
+      text-align: center
+      font-weight: bold
+      margin-bottom: 16px
 
+// callback div
 .callback
   background-color: $siteColor1
   min-width: 278px
 
   &__form
-    padding-top: 15px
     min-height: 250px
     color: #fff
     display: flex
@@ -199,30 +204,30 @@ details.faq__details > summary::after
     justify-content: space-around
     align-items: center
     &_black-mh180
-      padding-top: 0
       color: #000
       min-height: 180px
+
   &__h2
     font-size: 28px
     line-height: 34px
     font-weight: bold
-    text-align: left
+    text-align: center
     text-transform: uppercase
   &__p
     font-size: 14px
     line-height: 13px
-    text-align: left
+    text-align: center
   &__tel
     padding: 17px 24px
     width: 230px
     border-radius: 30px
     border: none
     &__footer
-      padding: 12px 24px
       background-color: inherit
       border: 1px solid #000
 
-.personal-data
+
+.pers-data
   display: none
   &:checked + &__label::before
     font-family: FontAwesome, serif
@@ -233,9 +238,7 @@ details.faq__details > summary::after
   &__label
     font-size: 10px
     line-height: 12px
-    text-align: left
-    &__footer
-      color: #9e9e9e
+    text-align: center
     &::before
       font-family: FontAwesome, serif
       content: '\f0c8'
@@ -243,8 +246,9 @@ details.faq__details > summary::after
       height: 10px
       margin-right: 8px
 
+// Review div
+
 .review
-  @include padding_20_0
   position: relative
   min-width: 278px
   &__box
@@ -263,7 +267,12 @@ details.faq__details > summary::after
       left: 0
     &_right
       right: 0
-  &__photo
+  &__h2
+    font-size: 28px
+    line-height: 34px
+    text-align: center
+    font-weight: bold
+  &__foto
     width: 100px
     height: 100px
     padding-right: 18px
@@ -286,8 +295,8 @@ details.faq__details > summary::after
     text-align: justify
     clear: both
 
+//advantages
 .advantages
-  @include padding_20_0
   background-color: #f7f7f7
   min-width: 278px
   &__container
@@ -296,7 +305,6 @@ details.faq__details > summary::after
     justify-content: center
     padding-top: 15px
   &__box
-    @include padding_10_0
     display: flex
     flex-direction: column
     width: 86px
@@ -314,10 +322,10 @@ details.faq__details > summary::after
     font-size: 10px
     line-height: 12px
     text-align: center
-    padding-top: 10px
+    padding-top: 15px
 
-.guaranty
-  @include padding_20_0
+// garanty div
+.garanty
   &__header
     display: flex
     padding-bottom: 14px
@@ -346,53 +354,48 @@ details.faq__details > summary::after
     text-align: justify
     padding: 12px 0
 
+// FAQ div
+
 .faq
-  @include padding_20_0
   background-color: #D2ECF7
   &__qustions
     display: flex
     flex-direction: column
   &__answer
-    background: #F7F7F7
-    padding: 15px 25px
-    font-weight: normal
-    font-size: 16px
-    line-height: 19px
-    border-radius: 0 0 32px 32px
+    padding-top: 15px
   &__details
     background-color: #fff
+    padding: 15px 25px
     font-size: 14px
     line-height: 17px
-    text-align: left
+    text-align: justify
     min-height: 20px
     min-width: 228px
     border-radius: 32px
     display: flex
     align-items: center
     margin: 10px 0
-    cursor: pointer
+
   &__summary
     display: flex
     justify-content: space-between
     align-items: center
-    font-weight: normal
-    font-size: 16px
-    line-height: 19px
-    padding: 15px 25px
+
+
+
+// partners div
+
 .partners
   min-height: 58px
-  @include padding_20_0
+
   &__box
     @include flexbox
     flex-grow: 1
     flex-flow: row wrap
     position: relative
 
-  &__link
-    padding: 6px 10px
 
 .footer
-  @include padding_10_0
   background-color: #e9e9e9
   color: #000
   min-width: 278px
@@ -433,5 +436,72 @@ details.faq__details > summary::after
   &__footer-m320
     display: none
 
+.nav
+  display: none
+  position: absolute
+  right: -100%
+  background-color: #fff
+  width: 100%
+  transition: all 0.3s
+  z-index: 2000
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 80px
+
+  &__logo-img
+    height: 48px
+    padding: 15px 25px
+
+.top-menu
+  display: none
+
+
+.menu
+  display: block
+  &__list
+    list-style: none
+  &__link
+    font-size: 18px
+    line-height: 22px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 6px 25px
+    color: #000
+    transition: all .5s
+    &:hover
+      color: #ffffff
+      background-color: $siteColor1
+  &__label
+    color: #fff
+    font-size: 29px
+    display: block
+    padding: 27px 21px
+    &_footer
+      color: #000
+      padding: 25px 15px 25px 0
+
+    &_close
+      @include flexbox
+      font-size: 40px
+      padding: 15px 25px
+      &:hover
+        cursor: pointer
+
+.blur
+  position: absolute
+  &_active
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1000
+    filter: blur(5px) grayscale(80%)
+    background-color: #00000033
+
+
+@import "1440+"
+@import "m768-1440"
 @import "menu"
-@import "tablet768-1200"
