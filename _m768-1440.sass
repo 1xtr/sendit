@@ -1,4 +1,9 @@
 @media (min-width: 768px) and (max-width: 1439px)
+
+  .h2_768
+    font-weight: bold
+    font-size: 36px
+    line-height: 43px
   .center
     padding: 0 calc(50% - 350px)
   .logo-img
@@ -31,6 +36,7 @@
     position: absolute
     width: 400px
     height: 245px
+    padding: 0
     top: 0
     left: 0
     background-color: transparent
@@ -97,7 +103,23 @@
       min-height: 130px
 
 
+  .review
+    padding: 45px 34px
+    &__container
+      display: flex
+      justify-content: space-around
+    &__box
+      width: 280px
+      height: 250px
+      &__768
+        display: block
+
   .advantages
+    padding: 35px
+    &__container
+      margin-top: 24px
+      padding: 0
+      justify-content: space-between
     &__box
       width: 100px
       padding: 5px
@@ -107,3 +129,10 @@
       border-radius: 50px
     &__img
       width: 50px
+    &__text
+      font-size: 12px
+      line-height: 14px
+
+  .garanty
+    &__btn
+      width: 220px
