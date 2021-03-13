@@ -1,6 +1,7 @@
 *
   margin: 0
   padding: 0
+  box-sizing: border-box
 
 a
   text-decoration: none
@@ -8,7 +9,7 @@ a
     cursor: pointer
 
 body
-  font-family: 'PT Sans', sans-serif
+  font-family: myriad-pro, sans-serif
 
 @import "vars"
 
@@ -64,8 +65,8 @@ details.faq__details > summary::after
   padding: 27px 20px
 
 .title-m320
-  font-size: 28px
-  line-height: 34px
+  font-size: 18px
+  line-height: 22px
   text-align: left
   font-weight: bold
   text-transform: uppercase
@@ -78,11 +79,13 @@ details.faq__details > summary::after
 //@media (max-width: 767px)
 .top
   position: relative
-  min-height: 277px
-  //min-width: 320px
+  //min-height: 504px
+  min-width: 320px
+  //background: url("img/top-bg_small.jpg") no-repeat bottom right
+  //background-size: cover
 
 .header
-  min-height: 50vh
+  min-height: 277px
   display: flex
   align-items: flex-start
   justify-content: space-between
@@ -106,7 +109,8 @@ details.faq__details > summary::after
     height: 37px
 
 .send-box
-  height: 50vh
+  height: 50%
+  min-height: 227px
   display: flex
   flex-direction: column
   justify-content: space-around
@@ -138,7 +142,7 @@ details.faq__details > summary::after
     align-items: center
   &__img
     width: 278px
-
+    height: 100%
   &__h3
     font-size: 18px
     line-height: 22px
@@ -180,14 +184,12 @@ details.faq__details > summary::after
   &__footer
     padding: 21px
     background-color: #f7f7f7
-    text-align: center
     @include flexbox
     flex-direction: column
     min-width: 278px
     &__text
       font-size: 24px
       line-height: 29px
-      text-align: center
       font-weight: bold
       margin-bottom: 16px
 
@@ -195,9 +197,10 @@ details.faq__details > summary::after
 .callback
   background-color: $siteColor1
   min-width: 278px
-
+  padding-top: 32px
+  padding-bottom: 14px
   &__form
-    min-height: 250px
+    min-height: 170px
     color: #fff
     display: flex
     flex-direction: column
@@ -211,12 +214,12 @@ details.faq__details > summary::after
     font-size: 28px
     line-height: 34px
     font-weight: bold
-    text-align: center
     text-transform: uppercase
+    margin-bottom: 15px
   &__p
     font-size: 14px
     line-height: 13px
-    text-align: center
+    margin-bottom: 10px
   &__tel
     padding: 17px 24px
     width: 230px
@@ -368,7 +371,7 @@ details.faq__details > summary::after
     padding: 15px 25px
     font-size: 14px
     line-height: 17px
-    text-align: justify
+    text-align: left
     min-height: 20px
     min-width: 228px
     border-radius: 32px
@@ -438,7 +441,7 @@ details.faq__details > summary::after
 
 .nav
   display: none
-  position: absolute
+  position: fixed
   right: -100%
   background-color: #fff
   width: 100%
@@ -459,7 +462,7 @@ details.faq__details > summary::after
 
 
 .menu
-  display: block
+  //display: none
   &__list
     list-style: none
   &__link
@@ -501,7 +504,12 @@ details.faq__details > summary::after
     filter: blur(5px) grayscale(80%)
     background-color: #00000033
 
+.site-menu
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 280px
 
-@import "1440+"
 @import "m768-1440"
-@import "menu"
+@import "1440+"
+

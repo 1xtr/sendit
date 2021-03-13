@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -12,7 +13,7 @@ a:hover {
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: myriad-pro, sans-serif;
 }
 
 @-moz-document url-prefix() {
@@ -80,8 +81,8 @@ details.faq__details > summary::after {
 }
 
 .title-m320 {
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 22px;
   text-align: left;
   font-weight: bold;
   text-transform: uppercase;
@@ -96,11 +97,11 @@ details.faq__details > summary::after {
 
 .top {
   position: relative;
-  min-height: 277px;
+  min-width: 320px;
 }
 
 .header {
-  min-height: 50vh;
+  min-height: 277px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -125,7 +126,8 @@ details.faq__details > summary::after {
 }
 
 .send-box {
-  height: 50vh;
+  height: 50%;
+  min-height: 227px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -161,6 +163,7 @@ details.faq__details > summary::after {
 }
 .about__img {
   width: 278px;
+  height: 100%;
 }
 .about__h3 {
   font-size: 18px;
@@ -201,7 +204,6 @@ details.faq__details > summary::after {
 .steps__footer {
   padding: 21px;
   background-color: #f7f7f7;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,7 +213,6 @@ details.faq__details > summary::after {
 .steps__footer__text {
   font-size: 24px;
   line-height: 29px;
-  text-align: center;
   font-weight: bold;
   margin-bottom: 16px;
 }
@@ -219,9 +220,11 @@ details.faq__details > summary::after {
 .callback {
   background-color: #008DCD;
   min-width: 278px;
+  padding-top: 32px;
+  padding-bottom: 14px;
 }
 .callback__form {
-  min-height: 250px;
+  min-height: 170px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -236,13 +239,13 @@ details.faq__details > summary::after {
   font-size: 28px;
   line-height: 34px;
   font-weight: bold;
-  text-align: center;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 .callback__p {
   font-size: 14px;
   line-height: 13px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 .callback__tel {
   padding: 17px 24px;
@@ -421,7 +424,7 @@ details.faq__details > summary::after {
   padding: 15px 25px;
   font-size: 14px;
   line-height: 17px;
-  text-align: justify;
+  text-align: left;
   min-height: 20px;
   min-width: 228px;
   border-radius: 32px;
@@ -500,7 +503,7 @@ details.faq__details > summary::after {
 
 .nav {
   display: none;
-  position: absolute;
+  position: fixed;
   right: -100%;
   background-color: #fff;
   width: 100%;
@@ -522,9 +525,6 @@ details.faq__details > summary::after {
   display: none;
 }
 
-.menu {
-  display: block;
-}
 .menu__list {
   list-style: none;
 }
@@ -576,12 +576,13 @@ details.faq__details > summary::after {
   background-color: #00000033;
 }
 
-@media (min-width: 1440px) {
-  .header {
-    min-height: 525px;
-    background: url("img/top-bg.jpg") no-repeat bottom right;
-  }
+.site-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
 }
+
 @media (min-width: 768px) and (max-width: 1439px) {
   .center {
     padding: 0 calc(50% - 350px);
@@ -618,6 +619,7 @@ details.faq__details > summary::after {
 
   .header {
     min-height: 413px;
+    padding-right: 23px;
   }
 
   .send-box {
@@ -662,6 +664,7 @@ details.faq__details > summary::after {
   }
 
   .steps {
+    padding: 38px 60px 56px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -674,12 +677,30 @@ details.faq__details > summary::after {
     box-sizing: border-box;
   }
   .steps__footer {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding: 30px 34px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .steps__footer__text {
+    width: 380px;
+    text-align: left;
+    margin: 0;
   }
 
+  .callback {
+    height: 171px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 32px;
+    padding-bottom: 14px;
+  }
+  .callback__ttl {
+    width: 250px;
+  }
   .callback__form {
-    min-height: 200px;
+    min-height: 130px;
   }
 
   .advantages__box {
@@ -695,11 +716,11 @@ details.faq__details > summary::after {
     width: 50px;
   }
 }
-.site-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 280px;
+@media (min-width: 1440px) {
+  .header {
+    min-height: 525px;
+    background: url("img/top-bg.jpg") no-repeat bottom right;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
