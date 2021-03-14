@@ -157,40 +157,42 @@
         </div>
         <div class="advantages center">
             <h2 class="h2_320 h2_768">НАШИ ПРЕИМУЩЕСТВА</h2>
-            <div class="advantages__container">
-                <div class="advantages__box">
-                    <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
-                                                            src="img/icons/delivery-car.svg"></div>
-                    <p class="advantages__text">Бесплатный сервис</p>
-                </div>
-                <div class="advantages__box">
-                    <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
-                                                            src="img/icons/clipboard.svg"></div>
-                    <p class="advantages__text">Огромный выбор вариантов доставки</p>
-                </div>
-                <div class="advantages__box">
-                    <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
-                                                            src="img/icons/star.svg">
+            <div class="advantages_main">
+                <div class="advantages__container">
+                    <div class="advantages__box">
+                        <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
+                                                                src="img/icons/delivery-car.svg"></div>
+                        <p class="advantages__text">Бесплатный сервис</p>
                     </div>
-                    <p class="advantages__text">4 параметра лучшего предложения</p>
-                </div>
-            </div>
-            <div class="advantages__container">
-                <div class="advantages__box">
-                    <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
-                                                            src="img/icons/hand-send-box.svg"></div>
-                    <p class="advantages__text">Удобство заказа</p>
-                </div>
-                <div class="advantages__box">
-                    <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
-                                                            src="img/icons/talking-man.svg"></div>
-                    <p class="advantages__text">Online-поддержка</p>
-                </div>
-                <div class="advantages__box">
-                    <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
-                                                            src="img/icons/bar-code.svg">
+                    <div class="advantages__box">
+                        <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
+                                                                src="img/icons/clipboard.svg"></div>
+                        <p class="advantages__text">Огромный выбор вариантов доставки</p>
                     </div>
-                    <p class="advantages__text">Единый номер отслеживания</p>
+                    <div class="advantages__box">
+                        <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
+                                                                src="img/icons/star.svg">
+                        </div>
+                        <p class="advantages__text">4 параметра лучшего предложения</p>
+                    </div>
+                </div>
+                <div class="advantages__container">
+                    <div class="advantages__box">
+                        <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
+                                                                src="img/icons/hand-send-box.svg"></div>
+                        <p class="advantages__text">Удобство заказа</p>
+                    </div>
+                    <div class="advantages__box">
+                        <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
+                                                                src="img/icons/talking-man.svg"></div>
+                        <p class="advantages__text">Online-поддержка</p>
+                    </div>
+                    <div class="advantages__box">
+                        <div class="advantages__img-cover"><img alt="delivery" class="advantages__img"
+                                                                src="img/icons/bar-code.svg">
+                        </div>
+                        <p class="advantages__text">Единый номер отслеживания</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,14 +207,14 @@
                     <p class="garanty__text">Контроль работы курьеров в онлайн режиме. Страхование по запросу клиента Каждый куръер находится под пристальным вниманием менеджеров SendIt</p>
                     <a class="button button_blue garanty__btn" href="#">Подробнее</a>
                 </div>
-                <div class="garanty__box hidden">
+                <div class="garanty__box garanty__box__768">
                     <div class="garanty__header">
                         <div class="garanty__icon"><img alt="Insurance" class="garanty__img" src="img/icons/box-eye.svg"></div>
                         <p class="garanty__ttl">Прозрачность расчетов</p></div>
                     <p class="garanty__text">Чтобы узнать точную стоимость отправления вам не нужно связываться с каждой курьерской службой в отдельности и сравнивать полученные предложения, просто воспользуйтесь нашим сервисом</p>
                     <a class="button button_blue garanty__btn" href="#">Подробнее</a>
                 </div>
-                <div class="garanty__box hidden">
+                <div class="garanty__box garanty__box__768">
                     <div class="garanty__header">
                         <div class="garanty__icon"><img alt="Insurance" class="garanty__img" src="img/icons/box-delivered.svg"></div>
                         <p class="garanty__ttl">Лучшие поставщики</p></div>
@@ -223,7 +225,7 @@
             <a class="review__slide review__slide_right" href="#"><i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="faq center">
-            <h2 class="h2_320 h2_768">Остались сомнения?</h2>
+            <h2 class="h2_320 h2_768 faq__h2">Остались сомнения?</h2>
             <div class="faq__questions">
                 <details class="faq__details">
                     <summary class="faq__summary">На бумажную волокиту уйдёт много времени, а мне нужно доставить
@@ -278,23 +280,33 @@
             <a class="review__slide review__slide_right" href="#"><i class="fas fa-chevron-right"></i></a>
         </div>
         <footer class="footer center">
-            <form action="#" class="callback__form callback__form_black-mh180">
+            <form action="#" class="callback__form callback__form_black-mh180 footer__callback__form">
                 <h2 class="title-m320">Остались вопросы?</h2>
-                <input class="callback__tel callback__tel__footer" id="callback-tel_footer" placeholder="Ваш телефон"
+                <input class="callback__tel callback__tel__footer button__footer" id="callback-tel_footer" placeholder="Ваш телефон"
                        type="tel">
-                <a class="button button_blue" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+                <a class="button button_blue button__footer" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
                 <input checked class="pers-data" id="152fz-footer" type="checkbox">
-                <label class="pers-data__label" for="152fz-footer">Я согласен на обработку персональных данных</label>
+
             </form>
+            <label class="pers-data__label pers-data__label__footer" for="152fz-footer">Я согласен на обработку персональных данных</label>
             <hr class="footer__hr">
-            <div class="site-menu">
+            <div class="site-menu footer__box">
                 <a href="#"><img alt="logo" class="logo-img_footer" src="img/logo_color2.png"></a>
+                <ul class="footer__menu">
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">Главная</a></li>
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">Описание</a></li>
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">Преимущества</a></li>
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">Отзывы</a></li>
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">Партнеры</a></li>
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">Гарантии</a></li>
+                    <li class="footer__menu__list"><a class="footer__menu__link" href="#">FAQ</a></li>
+                </ul>
                 <label class="menu__label menu__label_footer" for="top-menu"><i class="fas fa-bars"></i></label>
             </div>
             <hr class="footer__hr">
             <div class="footer__bottom">
                 <p class="footer__copyrights">© Сами копипастим и вам разрешаем</p>
-                <div class="social-links__footer-m320"><i class="fab fa-vk"></i><i class="fab fa-instagram"></i><i
+                <div class="social-links__footer-m320 footer__social"><i class="fab fa-vk"></i><i class="fab fa-instagram"></i><i
                         class="fab fa-facebook-f"></i></div>
                 <p class="footer__copyrights">Задизайнено мной</p></div>
         </footer>

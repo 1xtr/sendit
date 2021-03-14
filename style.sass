@@ -19,7 +19,8 @@ body
     display: block
 
 summary::-webkit-details-marker
-  display: none
+  //display: none
+  list-style-type: none
 
 details:focus, details[open]:focus, summary:focus
   outline: none
@@ -69,6 +70,7 @@ details.faq__details > summary::after
     background-color: $siteColor3
     color: #000
 
+
 .padding-m320
   padding: 27px 20px
 
@@ -93,7 +95,8 @@ details.faq__details > summary::after
   //background-size: cover
 
 .header
-  min-height: 277px
+  @include fluidBlockSize(277, 413, 320, 767)
+  //min-height: 277px
   display: flex
   align-items: flex-start
   justify-content: space-between
@@ -114,7 +117,7 @@ details.faq__details > summary::after
     padding: 27px 21px
   &_footer
     //padding: 25px 0 25px 0
-    height: 37px
+    height: 30px
 
 .send-box
   padding: 20px
@@ -162,7 +165,6 @@ details.faq__details > summary::after
   &__p
     font-size: 14px
     line-height: 16px
-    text-align: justify
     padding-bottom: 15px
 // steps div
 
@@ -258,6 +260,8 @@ details.faq__details > summary::after
       width: 10px
       height: 10px
       margin-right: 8px
+    &__footer
+      padding: 12px 0
 
 // Review div
 
@@ -364,6 +368,8 @@ details.faq__details > summary::after
     align-items: center
   &__box
     width: 235px
+    &__768
+      display: none
   &__btn
     width: 235px
   &__icon
@@ -449,6 +455,8 @@ details.faq__details > summary::after
   min-width: 278px
   @include flexbox
   flex-direction: column
+  &__menu
+    display: none
   &__bottom
     display: flex
     justify-content: space-between
