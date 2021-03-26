@@ -7,6 +7,7 @@
     padding: 0 calc(50% - 580px)
     //min-height: 525px
     background: url("img/top-bg.jpg") no-repeat bottom right
+    background-size: cover
   .top-menu__link
     font-size: 18px
     line-height: 22px
@@ -45,6 +46,9 @@
   .steps
     height: 1110px
     padding: 68px 140px
+    justify-content: center
+    &__container
+      width: 1062px
     &__item
       width: 462px
       padding: 0
@@ -77,26 +81,143 @@
       line-height: 23px
     &__tel
       width: 360px
+      font-size: 16px
+      line-height: 19px
 
   .review
     height: 547px
     padding-top: 60px
     padding-bottom: 60px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__foto
+      width: 160px
+      height: 160px
+      margin-bottom: 26px
+    &__h2
+      align-self: flex-start
     &__box
+      min-height: 324px
       width: 460px
+      margin: 0 40px 0 0
+      &:last-of-type
+        margin-right: 0
     &__container
       width: 960px
+      margin-top: 50px
     &__desc
       font-size: 16px
       line-height: 19px
     &__surname
       font-size: 20px
       line-height: 24px
+      padding-bottom: 10px
     &__name
       font-size: 36px
       line-height: 43px
+      padding-bottom: 15px
+    &__text
+      font-size: 16px
+      line-height: 19px
     &__slide
+      font-size: 30px
       &_left
         left: 140px
       &_right
         right: 140px
+
+  .advantages
+    padding-top: 100px
+    padding-bottom: 70px
+    height: 496px
+    &__h2
+      font-size: 36px
+      line-height: 43px
+    &__main
+      justify-content: space-between
+    &__container
+      width: 50%
+      &:first-child
+        margin-right: 40px
+    &__box
+      width: 166px
+      margin: 0
+      &:nth-child(2)
+        margin: 0
+    &__img
+      width: 50%
+      &-cover
+        width: 160px
+        height: 160px
+        border-radius: 80px
+    &__text
+      font-size: 18px
+      line-height: 22px
+
+  .garanty
+    padding-top: 80px
+    padding-bottom: 64px
+    &__box
+      width: 360px
+    &__icon
+      width: 160px
+      height: 160px
+      margin-bottom: 32px
+    &__ttl
+      font-weight: 600
+      font-size: 30px
+      line-height: 36px
+    &__text
+      font-size: 16px
+      line-height: 19px
+
+  .faq
+    padding-top: 64px
+    padding-bottom: 47px
+    &__h2
+      font-weight: bold
+      font-size: 36px
+      line-height: 43px
+    &__container
+      display: flex
+      justify-content: space-between
+    &__details
+      width: 558px
+      font-size: 16px
+      line-height: 19px
+      margin: 0 0 16px 0
+    &__summary
+      min-height: 68px
+
+  .partners
+    height: 170px
+    padding-top: 50px
+    padding-bottom: 50px
+    &__link
+      width: 94px
+    &__logo
+      width: 100%
+
+  .footer
+    padding-top: 31px
+    padding-bottom: 24px
+    &__menu__list
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      margin-right: 60px
+    &__callback
+      &__form
+        width: 100%
+    &__h3
+      font-weight: 600
+      font-size: 30px
+      line-height: 36px
+    &__copyrights
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+
+  .logo-img_footer
+    height: 48px

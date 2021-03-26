@@ -22,6 +22,7 @@ body {
   }
 }
 summary::-webkit-details-marker {
+  display: none;
   list-style-type: none;
 }
 
@@ -460,7 +461,6 @@ details.faq__details > summary::after {
 .garanty__text {
   font-size: 12px;
   line-height: 14px;
-  text-align: justify;
   padding: 12px 0;
 }
 
@@ -637,9 +637,6 @@ details.faq__details > summary::after {
   cursor: pointer;
 }
 
-.blur {
-  position: absolute;
-}
 .blur_active {
   width: 100%;
   height: 100%;
@@ -773,6 +770,12 @@ details.faq__details > summary::after {
     justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
+  }
+  .steps__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 646px;
   }
   .steps__item {
     display: block;
@@ -943,6 +946,7 @@ details.faq__details > summary::after {
   }
   .footer__social {
     display: flex;
+    align-self: center;
     width: 70px;
     color: #008DCD;
   }
@@ -983,6 +987,7 @@ details.faq__details > summary::after {
   .header {
     padding: 0 calc(50% - 580px);
     background: url("img/top-bg.jpg") no-repeat bottom right;
+    background-size: cover;
   }
 
   .top-menu__link {
@@ -1035,6 +1040,10 @@ details.faq__details > summary::after {
   .steps {
     height: 1110px;
     padding: 68px 140px;
+    justify-content: center;
+  }
+  .steps__container {
+    width: 1062px;
   }
   .steps__item {
     width: 462px;
@@ -1078,18 +1087,37 @@ details.faq__details > summary::after {
   }
   .callback__tel {
     width: 360px;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .review {
     height: 547px;
     padding-top: 60px;
     padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .review__foto {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 26px;
+  }
+  .review__h2 {
+    align-self: flex-start;
   }
   .review__box {
+    min-height: 324px;
     width: 460px;
+    margin: 0 40px 0 0;
+  }
+  .review__box:last-of-type {
+    margin-right: 0;
   }
   .review__container {
     width: 960px;
+    margin-top: 50px;
   }
   .review__desc {
     font-size: 16px;
@@ -1098,16 +1126,148 @@ details.faq__details > summary::after {
   .review__surname {
     font-size: 20px;
     line-height: 24px;
+    padding-bottom: 10px;
   }
   .review__name {
     font-size: 36px;
     line-height: 43px;
+    padding-bottom: 15px;
+  }
+  .review__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .review__slide {
+    font-size: 30px;
   }
   .review__slide_left {
     left: 140px;
   }
   .review__slide_right {
     right: 140px;
+  }
+
+  .advantages {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    height: 496px;
+  }
+  .advantages__h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .advantages__main {
+    justify-content: space-between;
+  }
+  .advantages__container {
+    width: 50%;
+  }
+  .advantages__container:first-child {
+    margin-right: 40px;
+  }
+  .advantages__box {
+    width: 166px;
+    margin: 0;
+  }
+  .advantages__box:nth-child(2) {
+    margin: 0;
+  }
+  .advantages__img {
+    width: 50%;
+  }
+  .advantages__img-cover {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+  }
+  .advantages__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .garanty {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+  .garanty__box {
+    width: 360px;
+  }
+  .garanty__icon {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 32px;
+  }
+  .garanty__ttl {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .garanty__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .faq {
+    padding-top: 64px;
+    padding-bottom: 47px;
+  }
+  .faq__h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .faq__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .faq__details {
+    width: 558px;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 16px 0;
+  }
+  .faq__summary {
+    min-height: 68px;
+  }
+
+  .partners {
+    height: 170px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .partners__link {
+    width: 94px;
+  }
+  .partners__logo {
+    width: 100%;
+  }
+
+  .footer {
+    padding-top: 31px;
+    padding-bottom: 24px;
+  }
+  .footer__menu__list {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 60px;
+  }
+  .footer__callback__form {
+    width: 100%;
+  }
+  .footer__h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .footer__copyrights {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .logo-img_footer {
+    height: 48px;
   }
 }
 
